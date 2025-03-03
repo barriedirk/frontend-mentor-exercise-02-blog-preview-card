@@ -1,0 +1,174 @@
+/*
+font-weight: 100 – Thin
+font-weight: 200 – Extra Light (Ultra Light)
+font-weight: 300 – Light
+font-weight: 400 – Normal (Regular)
+font-weight: 500 – Medium
+font-weight: 600 – Semi Bold
+font-weight: 700 – Bold
+font-weight: 800 – Extra Bold (or Heavy)
+font-weight: 900 – Black (or Ultra Black)
+*/
+
+@font-face {
+  font-family: "FigtreeVariable";
+  src: url("./assets/fonts/Figtree-VariableFont_wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "FigtreeItalic";
+  src: url("./assets/fonts/Figtree-Italic-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "FigtreeExtraBold";
+  src: url("./assets/fonts/static/Figtree-ExtraBold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "FigtreeMedium";
+  src: url("./assets/fonts/static/Figtree-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --clr-gray950: hsl(0 0 7);
+  --clr-gray500: hsl(0 0 42);
+  --clr-white: hsl(0 0 100);
+  --clr-yellow: hsl(47 88 63);
+  --clr-black: hsl(0 0 0);
+
+  --t-text-preset-1-ff: "FigtreeExtraBold", sans-serif;
+  --t-text-preset-1-fs: 24px;
+  --t-text-preset-1-fw: 800;
+  --t-text-preset-1-ls: 0;
+  --t-text-preset-1-lh: 150%;
+
+  --t-text-preset-2-ff: "FigtreeVariable", sans-serif;
+  --t-text-preset-2-fs: 16px;
+  --t-text-preset-2-fw: 500;
+  --t-text-preset-2-ls: 0;
+  --t-text-preset-2-lh: 150%;
+
+  --t-text-preset-3-ff: "FigtreeMedium", sans-serif;
+  --t-text-preset-3-fs: 14px;
+  --t-text-preset-3-fw: 500;
+  --t-text-preset-3-ls: 0;
+  --t-text-preset-3-lh: 150%;
+
+  --t-text-preset-3b-ff: "FigtreeExtraBold", sans-serif;
+  --t-text-preset-3b-fs: 14px;
+  --t-text-preset-3b-fw: 700;
+  --t-text-preset-3b-ls: 0;
+  --t-text-preset-3b-lh: 150%;
+}
+
+.text-preset-1 {
+  font-family: var(--t-text-preset-1-ff);
+  line-height: var(--t-text-preset-1-lh);
+  letter-spacing: var(--t-text-preset-1-ls);
+  font-size: var(--t-text-preset-1-fs);
+  font-weight: var(--t-text-preset-1-fw);
+}
+
+.text-preset-2 {
+  font-family: var(--t-text-preset-2-ff);
+  line-height: var(--t-text-preset-2-lh);
+  letter-spacing: var(--t-text-preset-2-ls);
+  font-size: var(--t-text-preset-2-fs);
+  font-weight: var(--t-text-preset-2-fw);
+}
+
+.text-preset-3 {
+  font-family: var(--t-text-preset-3-ff);
+  line-height: var(--t-text-preset-3-lh);
+  letter-spacing: var(--t-text-preset-3-ls);
+  font-size: var(--t-text-preset-3-fs);
+  font-weight: var(--t-text-preset-3-fw);
+}
+
+.text-preset-3b {
+  font-family: var(--t-text-preset-3b-ff);
+  line-height: var(--t-text-preset-3b-lh);
+  letter-spacing: var(--t-text-preset-3b-ls);
+  font-size: var(--t-text-preset-3b-fs);
+  font-weight: var(--t-text-preset-3b-fw);
+}
+
+body {
+  font-family: "FigtreeVariable", sans-serif;
+  background-color: var(--clr-yellow);
+  color: var(--clr-gray950);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 16px;
+}
+
+.card {
+  max-width: 384px;
+  padding: 24px;
+  background-color: var(--clr-white);
+  border-radius: 20px;
+  box-shadow: 10px 10px 1px var(--clr-black);
+  border: 1px solid var(--clr-black);
+  transition: color 0.5s ease;
+}
+
+.card-body {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card--image {
+  border-radius: 20px;
+}
+
+.card--published-date {
+  margin-top: 13px;
+}
+
+.card--title,
+.card--text {
+  margin-top: 14px;
+}
+
+.card footer {
+  margin-top: 20px;
+}
+
+.card--badge {
+  background-color: var(--clr-yellow);
+  padding: 5px 12px;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.card--author-info {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+
+.card--author-avatar {
+  width: 32px;
+}
+
+.focusable-element:focus,
+.focusable-element:active,
+.focusable-element:hover {
+  color: var(--clr-yellow);
+  outline: 1px dashed grey;
+}
